@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-4.1.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <aop:config proxy-target-class="true">
+        <aop:aspect id="aspectController" ref="securityAspect">
+            <aop:pointcut id="controllerPointcut" expression="execution(* com.ngj.rest.endpoint.*.*(..))"/>
+            <aop:around method="doControllerAspect" pointcut-ref="controllerPointcut"/>
+        </aop:aspect>
+
+    </aop:config>
+
+    <bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">
+        <constructor-arg ref="roleHierarchy" />
+    </bean>
+    <bean id="roleHierarchy"
+          class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
+        <property name="hierarchy">
+            <value>
+                ROLE_SUP > ROLE_ADMIN
+                ROLE_ADMIN > ROLE_USER
+                ROLE_SUP > ROLE_USER
+                ROLE_SUP > ROLE_GUEST
+                ROLE_ADMIN > ROLE_GUEST
+                ROLE_USER > ROLE_GUSET
+            </value>
+        </property>
+    </bean>
+</beans>

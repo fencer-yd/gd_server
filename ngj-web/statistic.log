@@ -1,0 +1,2 @@
+2016-03-12 17:52:12 INFO  statistic - 1||com.ngj.rest.endpoint.UserEndpoint||getUsers||[0,200,2]||88
+2016-03-12 17:52:18 INFO  statistic - 1||com.ngj.rest.endpoint.UserEndpoint||getUsers||[0,200,2]||4

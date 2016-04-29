@@ -1,0 +1,14 @@
+2016-04-05 11:53:46 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-05 11:53:46 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/ngj?autoReconnect=true
+2016-04-05 11:53:47 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-05 11:53:47 INFO  com.ngj.datasource.RedisClient - redis started connected to localhost:6379
+2016-04-05 11:53:48 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : company
+2016-04-05 11:53:48 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : user
+2016-04-05 11:54:02 INFO  org.reflections.Reflections - Reflections took 47 ms to scan 1 urls, producing 15 keys and 25 values 
+2016-04-05 13:38:23 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-05 13:38:23 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/emsApp?autoReconnect=true
+2016-04-05 13:38:24 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-05 13:38:24 INFO  com.ngj.datasource.RedisClient - redis started connected to 127.0.0.1:6379
+2016-04-05 13:38:25 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : company
+2016-04-05 13:38:25 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : user
+2016-04-05 13:39:25 INFO  org.reflections.Reflections - Reflections took 66 ms to scan 1 urls, producing 15 keys and 25 values 

@@ -1,0 +1,22 @@
+2016-04-25 23:12:19 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-25 23:12:19 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/emsApp?autoReconnect=true
+2016-04-25 23:12:19 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-25 23:12:19 INFO  com.ngj.datasource.RedisClient - redis started connected to 127.0.0.1:6379
+2016-04-25 23:12:20 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2016-04-25 23:19:31 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-25 23:19:31 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/emsApp?autoReconnect=true
+2016-04-25 23:19:31 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-25 23:19:31 INFO  com.ngj.datasource.RedisClient - redis started connected to 127.0.0.1:6379
+2016-04-25 23:19:31 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2016-04-25 23:22:42 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-25 23:22:42 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/emsApp?autoReconnect=true
+2016-04-25 23:22:42 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-25 23:22:43 INFO  com.ngj.datasource.RedisClient - redis started connected to 127.0.0.1:6379
+2016-04-25 23:22:43 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2016-04-25 23:44:02 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-04-25 23:44:02 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/emsApp?autoReconnect=true
+2016-04-25 23:44:03 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-04-25 23:44:03 INFO  com.ngj.datasource.RedisClient - redis started connected to 127.0.0.1:6379
+2016-04-25 23:44:04 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : register
+2016-04-25 23:44:04 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : company
+2016-04-25 23:44:04 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : user

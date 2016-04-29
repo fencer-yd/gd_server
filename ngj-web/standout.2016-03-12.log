@@ -1,0 +1,8 @@
+2016-03-12 17:51:32 INFO  com.ngj.resource.ResourceLoadUtils - service started at dev
+2016-03-12 17:51:32 INFO  com.ngj.datasource.NgjDatasource - start datasource connect to jdbc:mysql://localhost:3306/ngj?autoReconnect=true
+2016-03-12 17:51:33 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2016-03-12 17:51:34 INFO  com.ngj.datasource.RedisClient - redis started connected to localhost:6379
+2016-03-12 17:51:36 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : company
+2016-03-12 17:51:36 INFO  com.ngj.rest.jaxrs.JerseyResource - register service : user
+2016-03-12 17:52:12 INFO  statistic - 1||com.ngj.rest.endpoint.UserEndpoint||getUsers||[0,200,2]||88
+2016-03-12 17:52:18 INFO  statistic - 1||com.ngj.rest.endpoint.UserEndpoint||getUsers||[0,200,2]||4
