@@ -11,5 +11,5 @@ public interface CustomerService {
     Long insert(Customer customer);
     void update(Customer customer);
     void deleteByTenantId(Long tenant);
-    List<Customer> selectAll(Long start,Integer limit);
+    List<Customer> selectAll(Long tenantId);
 }

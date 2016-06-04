@@ -12,5 +12,6 @@ public interface GroupService {
     void update(Group group);
     void deleteById(Long id);
     List<Group> selectByTenant(Long tenant);
+    Group selectById(Long id);
 
 }

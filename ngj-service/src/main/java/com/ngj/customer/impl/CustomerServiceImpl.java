@@ -29,8 +29,8 @@ public class CustomerServiceImpl implements CustomerService{
         mapper.deleteById(tenant);
     }
 
-    public List<Customer> selectAll(Long start,Integer limit) {
-        return mapper.selectAll(start,limit);
+    public List<Customer> selectAll(Long tenantId) {
+        return mapper.selectAll(tenantId);
     }
 
 }

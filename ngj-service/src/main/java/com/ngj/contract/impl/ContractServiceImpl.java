@@ -44,7 +44,7 @@ public class ContractServiceImpl implements ContractService{
         {
             for(Contract contract : contracts)
             {
-                contract.setContent(StringEscapeUtils.escapeHtml4(contract.getContent()));
+                contract.setContent(StringEscapeUtils.unescapeHtml4(contract.getContent()));
 
             }
         }

@@ -11,9 +11,9 @@ import java.util.List;
  * Created by pangyueqiang on 16/4/25.
  */
 public interface ProductMapper {
-    @Insert("insert into product (tenant,name,desc,leader,cTime,uTime,status) values(#{tenant},#{name},#{desc},#{leader},#{cTime},#{uTime},#{status})")
+    @Insert("insert into product (tenant,name,`desc`,leader,cTime,uTime,status) values(#{tenant},#{name},#{desc},#{leader},#{cTime},#{uTime},#{status})")
     Long insert(Product product);
-    @Update("update product set name=#{name},desc=#{desc},leader=#{leader},uTime={uTime} where id = #{id}")
+    @Update("update product set name=#{name},`desc`=#{desc},leader=#{leader},uTime=#{uTime} where id = #{id}")
     void update(Product product);
     @Select("select * from product where status = 1 and tenant = #{tenant}")
     List<Product> findByTenant(Long tenant);

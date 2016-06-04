@@ -4,12 +4,14 @@ import com.ngj.signForm.SignFormService;
 import com.ngj.signForm.mapper.SignFormMapper;
 import com.ngj.signForm.model.SignForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Created by pangyueqiang on 16/4/25.
  */
+@Component("signFormService")
 public class SignFormServiceImpl implements SignFormService{
     @Autowired
     private SignFormMapper mapper;

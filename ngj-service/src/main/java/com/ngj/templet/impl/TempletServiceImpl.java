@@ -52,7 +52,6 @@ public class TempletServiceImpl implements TempletService{
         }
         return templets;
     }
-
     public void update(Templet templet) {
         if (!StringUtils.isEmpty(templet.getContent()))
         {

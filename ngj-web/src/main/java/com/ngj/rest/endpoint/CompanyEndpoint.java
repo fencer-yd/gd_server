@@ -1,5 +1,6 @@
 package com.ngj.rest.endpoint;
 
+import com.ngj.customer.model.Customer;
 import com.ngj.rest.req.CompanyChangeReq;
 import com.ngj.rest.req.CompanyCreateReq;
 import com.ngj.rest.resp.CommonsResp;
@@ -50,20 +51,35 @@ public class CompanyEndpoint {
             @ApiResponse(code = 200,message = "公司修改成功",response = Void.class)
     })
     @RolesAllowed("ROLE_ADMIN")
-    public Response changeCompany(CompanyChangeReq company){
-        companyService.changeCompany(PropertiesCopyUtils.copyProperties(Company.class,company));
-        return Response.noContent().build();
-    }
+    public CommonsResp changeCompany(CompanyChangeReq companyRes){
+        Company company = new Company();
+        company.setId(companyRes.getId());
+        company.setName(companyRes.getName());
+        Customer customer = new Customer();
+        customer.setTenant(companyRes.getId());
+        customer.setName(companyRes.getName());
+        customer.setDescrible(companyRes.getDescrible());
+        customer.setContact(companyRes.getContact());
+        customer.setAddress(companyRes.getAddress());
+        customer.setSize(companyRes.getSize());
+        companyService.changeCompany(company);
+        companyService.changeCustomer(customer);
+        return new CommonsResp(null,200);
 
+    }
     @GET
     @ApiOperation("获取公司列表")
-    @RolesAllowed("ROLE_ADMIN")
-    public List<Company> listCompany(@ApiParam(required = false,defaultValue = "0")@QueryParam("start") Long start,
-                                     @ApiParam(required = false,defaultValue = "200")@QueryParam("limit")Integer limit){
-        return companyService.listCompany(start,limit);
+    @RolesAllowed("ROLE_USER")
+    public CommonsResp listCompany() {
+        List<Company> companyList = companyService.listCompany();
+        return new CommonsResp(companyList, 200);
     }
-
-
-
-
+    @GET
+    @ApiOperation("获取公司")
+    @RolesAllowed("ROLE_USER")
+    @Path("/byId")
+    public CommonsResp findCompany(@ApiParam(required = true)@QueryParam("id") Long id){
+        Company company =  companyService.findCompany(id);
+        return new CommonsResp(company,200);
+    }
 }

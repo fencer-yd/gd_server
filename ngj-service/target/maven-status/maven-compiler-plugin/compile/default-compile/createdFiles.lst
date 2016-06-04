@@ -6,6 +6,8 @@ com/ngj/customer/mapper/CustomerMapper.class
 com/ngj/contract/model/Contract.class
 com/ngj/datasource/RedisSingleClient.class
 com/ngj/reletionTable/GroupMenuService.class
+com/ngj/data/TableData.class
+com/ngj/user/modle/Role.class
 com/ngj/customer/impl/CustomerServiceImpl.class
 com/ngj/signForm/impl/SignFormServiceImpl.class
 com/ngj/utils/JsonUtils.class
@@ -16,16 +18,19 @@ com/ngj/reletionTable/model/UserGroup.class
 com/ngj/user/impl/CompanyServiceImpl.class
 com/ngj/utils/TicketUtil.class
 com/ngj/user/mapper/CompanyMapper.class
+com/ngj/base/FormData.class
 com/ngj/user/modle/Group.class
 com/ngj/customer/CustomerService.class
 com/ngj/key_word/mapper/KeyWordMapper.class
 com/ngj/resource/ResourceLoadUtils.class
+com/ngj/menu/mapper/MenuMapper.class
 com/ngj/user/mapper/UserMapper.class
 com/ngj/contract/mapper/ContractMapper.class
 com/ngj/contract/impl/ContractServiceImpl.class
 com/ngj/user/modle/UserPassport.class
 com/ngj/templet/TempletService.class
 com/ngj/datasource/RedisClusterClient.class
+com/ngj/user/modle/Companydetail.class
 com/ngj/product/impl/ProductServiceImpl.class
 com/ngj/datasource/NgjDatasource.class
 com/ngj/reletionTable/GroupUserService.class
@@ -34,6 +39,8 @@ com/ngj/user/UserService.class
 com/ngj/customer/model/Customer.class
 com/ngj/user/impl/GroupServiceImpl.class
 com/ngj/reletionTable/mapper/GroupUserMapper.class
+com/ngj/data/DataTableField.class
+com/ngj/retail/impl/RetailServiceImpl.class
 com/ngj/templet/model/Templet.class
 com/ngj/register/model/Register.class
 com/ngj/templet/mapper/TempletMapper.class
@@ -48,6 +55,7 @@ com/ngj/user/modle/User.class
 com/ngj/utils/PropertiesCopyUtils.class
 com/ngj/reletionTable/impl/GroupMenuServiceImpl.class
 com/ngj/key_word/impl/KeyWordServiceImpl.class
+com/ngj/menu/model/Menu.class
 com/ngj/contract/ContractService.class
 com/ngj/templet/impl/TempletServiceImpl.class
 com/ngj/register/impl/RegisterServiceImpl.class
@@ -60,6 +68,7 @@ com/ngj/product/ProductService.class
 com/ngj/utils/CipherUtil.class
 com/ngj/item/ItemService.class
 com/ngj/exception/PromptException.class
+com/ngj/retail/RetailService.class
 com/ngj/user/modle/Company.class
 com/ngj/reletionTable/mapper/GroupMenuMapper.class
 com/ngj/register/RegisterService.class

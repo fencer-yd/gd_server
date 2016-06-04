@@ -33,5 +33,5 @@ public class RegisterReq {
     @ApiModelProperty(value = "名字",required = true)
     private String name;
 
-    private Integer status = 0;
+    private Integer status = 1;
 }

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Created by pangyueqiang on 16/3/1.
- * 用户简化串行化
+ * 用户简化串行化 把对象转化成统一json串
  */
 public class JsonUtils {
 

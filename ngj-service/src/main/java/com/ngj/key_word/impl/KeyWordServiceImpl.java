@@ -5,12 +5,14 @@ import com.ngj.key_word.KeyWordService;
 import com.ngj.key_word.mapper.KeyWordMapper;
 import com.ngj.key_word.model.KeyWord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Created by pangyueqiang on 16/4/25.
  */
+@Component("keyWordService")
 public class KeyWordServiceImpl implements KeyWordService{
     @Autowired
     private KeyWordMapper mapper;

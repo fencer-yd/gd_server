@@ -9,10 +9,12 @@ import lombok.Data;
 @Data
 public class CompanyChangeReq {
 
-    private Integer maxUser;
+    private Long id;
+    private String name;
+    private String address;
+    private String contact;
+    private Integer size;
+    private String describle;
 
-    private Long deadLine;
-
-    private Integer status;
 
 }

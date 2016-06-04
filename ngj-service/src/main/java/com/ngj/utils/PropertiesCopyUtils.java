@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  * Created by guanxinquan on 16/3/7.
- * 属性拷贝
+ * 属性
  */
 @Slf4j
 public class PropertiesCopyUtils {

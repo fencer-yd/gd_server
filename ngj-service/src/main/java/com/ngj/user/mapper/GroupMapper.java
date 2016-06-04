@@ -15,10 +15,16 @@ public interface GroupMapper {
     @Insert("insert into `group` (tenant,name,cTime,uTime,status) values (#{tenant},#{name},#{cTime},#{uTime},#{status}) ")
     @SelectKey(before = false, keyProperty = "id", resultType = Long.class, statementType = StatementType.STATEMENT, statement = "SELECT LAST_INSERT_ID() AS id")
     Long insert(Group group);
+
     @Update("update `group` set status = 0 where id = #{id}")
     void deleteById(Long id);
-    @Update("update `group` set name = #{name} where id = #{id}")
+
+    @Update("update `group` set name = #{name} , uTime = #{uTime} where id = #{id}")
     void update(Group group);
+
     @Select(SELECT_ALL +" where tenant=#{tenant} and status = 1 ")
     List<Group> selectByTenantId(@Param("tenant") Long tenant);
+
+    @Select(SELECT_ALL +" where id=#{id} and status = 1 ")
+    Group selectById(@Param("id") Long id);
 }

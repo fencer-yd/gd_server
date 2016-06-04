@@ -10,13 +10,13 @@ import java.util.List;
  * Created by pangyueqiang on 16/4/24.
  */
 public interface TempletMapper {
-    static final String SELECT_ALL = "select * from templet";
+    static final String SELECT_ALL = "select * from templet ";
 
-    @Insert("insert into templet(name,content,userId,type,cTime,uTime,status) values(#{name},#{content},#{userId},#{type},#{cTime},#{uTime},#{status})")
+    @Insert("insert into templet(name,content,userId,type,userName,cTime,uTime,status) values(#{name},#{content},#{userId},#{type},#{userName},#{cTime},#{uTime},#{status})")
     @SelectKey(before = false, keyProperty = "id", resultType = Long.class, statementType = StatementType.STATEMENT, statement = "SELECT LAST_INSERT_ID() AS id")
     Long insert(Templet templet);
 
-    @Select(SELECT_ALL+"where status = 1 and  userId = #{userId}")
+    @Select(SELECT_ALL+"where userId = ${userId} and status = 1  or type = 1 and status = 1 or type = 2 and status  = 1")
     List<Templet> selectByUserId(@Param("userId")Long userId);
 
     @Select(SELECT_ALL+"where status = 1 and  type = #{type}")

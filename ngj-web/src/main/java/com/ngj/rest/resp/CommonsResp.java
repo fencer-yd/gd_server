@@ -2,15 +2,17 @@ package com.ngj.rest.resp;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by guanxinquan on 16/3/1.
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@XmlRootElement
 public class CommonsResp<T> {
 
     private T value;
 
-    private Integer code = 0;
+    private Integer code = 1;
 
     private String msg;
 

@@ -17,6 +17,6 @@ public interface GroupMenuMapper {
     void insert(GroupMenu groupMenu);
     @Delete("delete from group_menu where group_id = #{group_id}")
     void delete(@Param("group_id") Long group_id);
-    @Select( SELECT_ALL+" where group_id=#{groupId}")
+    @Select( SELECT_ALL+" where group_id=#{group_id}")
     List<GroupMenu> selectByGroupId(@Param("group_id") Long group_id);
 }

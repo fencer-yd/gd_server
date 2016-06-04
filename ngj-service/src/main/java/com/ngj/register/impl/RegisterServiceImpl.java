@@ -63,14 +63,15 @@ public class RegisterServiceImpl implements RegisterService{
         Long tenantId = company.getId();
 
         //创建管理员
-        user.setCtime(curTime.getTime());
-        user.setUtime(curTime.getTime());
+        user.setCTime(curTime.getTime());
+        user.setUTime(curTime.getTime());
         user.setName(register.getName());
         user.setTenant(tenantId);
         user.setUsername(register.getUsername());
         user.setPassword(CipherUtil.generatePassword(register.getPassword()));
         user.setMobile(register.getMobile());
         user.setRole("ROLE_ADMIN");
+        user.setStatus(register.getStatus());
         user.setRefresh(curTime.getTime());
         userMapper.insert(user);
         Long userId = user.getId();

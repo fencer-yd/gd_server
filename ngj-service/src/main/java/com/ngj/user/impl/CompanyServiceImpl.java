@@ -1,8 +1,11 @@
 package com.ngj.user.impl;
 
+import com.ngj.customer.mapper.CustomerMapper;
+import com.ngj.customer.model.Customer;
 import com.ngj.user.CompanyService;
 import com.ngj.user.mapper.CompanyMapper;
 import com.ngj.user.modle.Company;
+import com.ngj.user.modle.Companydetail;
 import com.ngj.utils.PropertiesCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,6 +20,8 @@ public class CompanyServiceImpl implements CompanyService{
 
     @Autowired
     private CompanyMapper mapper ;
+    @Autowired
+    private CustomerMapper customerMapper ;
 
     public Long addCompany(Company company) {
 
@@ -28,13 +33,29 @@ public class CompanyServiceImpl implements CompanyService{
     }
 
     public void changeCompany(Company company) {
+        Long cruTime = System.currentTimeMillis();
         Company old = mapper.selectById(company.getId());
-        PropertiesCopyUtils.copyNotNullProperties(old,company);
+        old.setName(company.getName());
+        old.setUTime(cruTime);
+        old.setUtime(cruTime);
         mapper.updateCompany(company);
+
     }
 
-    public List<Company> listCompany(Long start, Integer limit) {
-        return mapper.listCompany(start,limit);
+    public void changeCustomer(Customer customer) {
+        Long cruTime = System.currentTimeMillis();
+        Customer oldCustomer = customerMapper.selectById(customer.getTenant());
+        oldCustomer.setUTime(cruTime);
+        oldCustomer.setName(customer.getName());
+        oldCustomer.setAddress(customer.getAddress());
+        oldCustomer.setContact(customer.getContact());
+        oldCustomer.setDescrible(customer.getDescrible());
+        oldCustomer.setSize(customer.getSize());
+        customerMapper.update(oldCustomer);
+    }
+
+    public List<Company> listCompany() {
+        return mapper.listCompany();
     }
 
     public Company findCompany(Long id) {
@@ -45,7 +66,19 @@ public class CompanyServiceImpl implements CompanyService{
         return mapper.selectByName(name);
     }
 
+    public List<Company> validatorByName(String name) {
+        return mapper.findByName(name);
+    }
+
     public Company findCompanyByDomin(String domin) {
         return mapper.selectCompanyByDomain(domin);
+    }
+
+    public List<Companydetail> findCompanyDetailByid(Long id) {
+        return mapper.findCompanyDeatilById(id);
+    }
+
+    public List<Companydetail> findCompanyDetail() {
+        return mapper.findCompanyDeatil();
     }
 }

@@ -25,8 +25,8 @@ public class AddUserTest {
         user.setName("test");
         user.setRole("ROLE_USER");
         user.setTenant(1l);
-        user.setUtime(System.currentTimeMillis());
-        user.setCtime(System.currentTimeMillis());
+        user.setUTime(System.currentTimeMillis());
+        user.setCTime(System.currentTimeMillis());
         HttpPost post = new HttpPost(uri);
         post.setHeader("Authorization","BBGADEg..");
         StringEntity stringEntity = new StringEntity(mapper.writeValueAsString(user),ContentType.APPLICATION_JSON);

@@ -145,7 +145,7 @@
                         </systemProperty>
                     </systemProperties>
                     <httpConnector>
-                        <port>8080</port>
+                        <port>8081</port>
                         <idleTimeout>30000</idleTimeout>
                     </httpConnector>
                     <scanIntervalSeconds>3</scanIntervalSeconds>

@@ -4,12 +4,14 @@ import com.ngj.user.GroupService;
 import com.ngj.user.mapper.GroupMapper;
 import com.ngj.user.modle.Group;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Created by pangyueqiang on 16/4/22.
  */
+@Component("groupService")
 public class GroupServiceImpl implements GroupService{
     @Autowired
     private GroupMapper mapper ;
@@ -27,5 +29,9 @@ public class GroupServiceImpl implements GroupService{
 
     public List<Group> selectByTenant(Long tenant) {
         return mapper.selectByTenantId(tenant);
+    }
+
+    public Group selectById(Long id) {
+        return mapper.selectById(id);
     }
 }

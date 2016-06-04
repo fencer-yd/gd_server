@@ -1,5 +1,6 @@
 package com.ngj.user;
 
+import com.ngj.menu.model.Menu;
 import com.ngj.user.modle.User;
 import com.ngj.user.modle.UserPassport;
 
@@ -17,5 +18,9 @@ public interface UserService {
     User loadUser(Long userId);
     UserPassport updateUser(User user);
     List<User> loadUsers(Long tenant,Long start,Integer limit);
+    List<User> loadUsers(Long tenant);
+    List<User> loadUsersBygroupId(Long groupId);
     Integer countUsers(Long tenant);
+    List<Menu> getMenusByUserId(Long userId);
+    void deleteById(Long id);
 }

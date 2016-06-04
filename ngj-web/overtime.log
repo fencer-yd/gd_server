@@ -1,7 +1,7 @@
-2016-04-27 01:09:01 ERROR overtime - request with empty auth /company
-2016-04-27 01:09:01 ERROR overtime - user author error
+2016-06-04 15:20:41 ERROR overtime - request with empty auth /company
+2016-06-04 15:20:41 ERROR overtime - user author error
 org.springframework.security.authentication.BadCredentialsException: user token is exception
-	at com.ngj.rest.sercurity.SecurityAspect.checkUser(SecurityAspect.java:233)
+	at com.ngj.rest.sercurity.SecurityAspect.checkUser(SecurityAspect.java:232)
 	at com.ngj.rest.sercurity.SecurityAspect.doControllerAspect(SecurityAspect.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -14,7 +14,7 @@ org.springframework.security.authentication.BadCredentialsException: user token 
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
-	at com.ngj.rest.endpoint.CompanyEndpoint$$EnhancerBySpringCGLIB$$2bde1686.listCompany(<generated>)
+	at com.ngj.rest.endpoint.CompanyEndpoint$$EnhancerBySpringCGLIB$$afcc52e1.listCompany(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

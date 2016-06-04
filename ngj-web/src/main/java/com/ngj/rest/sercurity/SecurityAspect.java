@@ -109,7 +109,6 @@ public class SecurityAspect {
 
         //输出调用日志
         loggerInvokeInfo(passport,signature.getDeclaringTypeName(),signature.getName(),System.currentTimeMillis()-start,args);
-
         if(!(ret instanceof CommonsResp || ret instanceof Response)){
             return new CommonsResp<>(ret);
         }else {

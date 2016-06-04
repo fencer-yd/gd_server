@@ -15,5 +15,5 @@ public class Register {
     private String password;
     private String mobile;
     private String name;
-    private Integer status = 0;
+    private Integer status = 1;
 }
